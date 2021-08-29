@@ -16,12 +16,23 @@ SUGESTÃO DE ESTRUTURAÇÃO BASE
 
 /* VARIÁVEIS */
 :root{
-  
+	--fundo-azul: #00002e;
+	--text-border: aliceblue;
+	--shadow: aquamarine;
+}
+*{
+	padding: 0;
+	margin: 0;
 }
 
 /*BODY*/
 	body{
-
+		font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+		background-color: var(--fundo-azul);
+		color: var(--text-border);
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
 	}
 
 /*TOPO*/
@@ -29,10 +40,73 @@ SUGESTÃO DE ESTRUTURAÇÃO BASE
 		
 	}
 
+	figcaption{
+		color: var(--fundo-azul);
+	}
+
 /*RODAPÉ*/
 	
 
 /*PÁGINA INICIAL*/
 	div.pg-home{
+		display: flex;
+		text-align: center;
 		
+		justify-content: center;
 	}
+
+	.pg-home header h2{
+		font-size: 70px;
+	}
+
+
+.selecaoPerfil{
+	display: flex;
+	list-style: none;
+	text-align: center;
+	justify-content: space-around;
+	width: 858px;
+	margin:50px 0;
+}
+
+.selecaoPerfil li, button{
+	cursor: pointer;
+}
+
+.selecaoPerfil li figure img:active, button:active{
+	box-shadow: 1px 1px aquamarine, -1px -1px teal;
+}
+
+figure img{
+	width: 186px;
+}
+
+.pg-home section footer button{
+	width: 200px;
+	height: 60px;
+	color: var(--text-border);
+	background-color: var(--fundo-azul);
+	border: var(--text-border) solid 1px;
+}
+
+@media (max-width: 768px){
+	
+	.pg-home header h2{
+		font-size: 40px;
+	}
+
+	.selecaoPerfil{
+		flex-wrap: wrap;
+		flex-direction: row;
+		width: 553px;
+	}
+
+	.selecaoPerfil li{
+		margin-bottom: 15px;
+	}
+
+	header{
+		display: flex;
+		justify-content: center;
+	}
+}
